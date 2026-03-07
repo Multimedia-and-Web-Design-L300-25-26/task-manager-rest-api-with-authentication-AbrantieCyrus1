@@ -14,8 +14,8 @@ const connectDB = async () => {
       throw error;
     }
 
-    // In non-test environments, exit the process on failure
-    process.exit(1);
+    // In non-test environments, log the error but don't exit
+    console.error("Continuing without database connection...");
   }
 };
 
